@@ -1,0 +1,21 @@
+* {
+  background-color:royalblue;
+  color:white;
+  text-align: center;
+}
+.nobull {
+  list-style-type: none;
+}
+img {
+  width: 1000px;
+  height: auto;
+}
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
