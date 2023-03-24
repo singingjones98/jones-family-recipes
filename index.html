@@ -6,13 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Favorite Recipes</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="javascript.js"></script>
 </head>
 <body>
   <h1>Keeping up with the Joneses Family Recipes</h1>
   <nav>
     <ul class="nav-list">
       <li><a href=>Appetizers</a></li>
-      <li><a href=>Main Dishes</a></li>
+     
+        <div class="dropdown">
+          <button class="dropbtn" onclick="myFunction()">Main Dishes<i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content" id="myDropdown">
+            <a href="recipes/main-dish-page-recipes/main-dish-recipes.html">Breakfasts</a>
+            <a href="#">Lunches</a>
+            <a href="#">Dinners</a>
+          </div>
+        </div>
       <li><a href=>Side Dishes</a></li>
       <li><a href=>Desserts</a></li>
       <li><a href=>Snacks</a></li>
@@ -25,6 +35,6 @@
     <li><a href="recipes/blueberry_drizzle_pancakes.html">Blueberry Drizzle Pancakes</a></li>
     <li><a href="recipes/quick_warm_blueberry_sauce.html">Quick Warm Blueberry Sauce</a></li>
   </ul>
-  <img src="https://m.media-amazon.com/images/M/MV5BNzAzNDc4NTQ1N15BMl5BanBnXkFtZTcwNTgxMzAzMw@@._V1_.jpg" alt="picture from The Joneses movie">  
+  <img src="https://www.facebook.com/photo/?fbid=10226646631464505&set=a.10206635803246306" alt="Jones family picture standing">  
 </body>
 </html>
