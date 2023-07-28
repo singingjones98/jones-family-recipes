@@ -1,4 +1,20 @@
-function myFunction() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 window.onclick = function(event) {
@@ -12,4 +28,4 @@ window.onclick = function(event) {
       }
     }
   }
-}
+}*/

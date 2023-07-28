@@ -1,86 +1,119 @@
 * {
-  background-color:royalblue;
-  color:white;
+  margin: 0; padding: 0; border: 0; box-sizing: border-box;
+}
+
+body, #container {
+  min-height: 100vh;
+  background-color: royalblue;
+  color: white;
+  font-family: verdana;
+}
+h1,h2 {
+  color: white;
   text-align: center;
+  padding: 20px 0px;
 }
-.nobull {
-  list-style-type: none;
+header {
+  background-color: rgb(150, 4, 4); height: 200 px;
+  position: relative;
+
 }
-img {
-  width: 1000px;
-  height: auto;
-}
-.nav-list {
+
+/*main menu styles*/
+nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 1rem;
-  margin:0;
-  padding: 5px;
-  list-style: none;
-}
-.nav-list a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-  background-color:black;
-}
-.dropbtn {
-  /*background-color:aqua;
-  color: white;*/
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-/*.dropbtn:hover, .dropbtn:focus {
-  background-color:floralwhite;
-}*/
-.dropdown {
-  float: left;
-  overflow: hidden;
-}/*
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color:white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown-content a {
-  color:white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-.dropdown-content a:hover {background-color:aqua}
-.show {display:block;}*/
-.dropdown .dropbtn {
-  cursor: pointer;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
   margin: 0;
+  padding: 5px;
+  /*this may be the old way:
+  position: absolute; bottom: 0px; left: 50%;
+  transform: translateX(-50%);*/
 }
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color:blueviolet;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+nav > ul, .submenu, .subsubmenu {
+  list-style-type: none;
+
 }
-.dropdown-content a {
-  float: none;
+nav > ul > li {
+  display: inline-block;
+  padding: 10px 0px;
+  position: relative;
+}
+nav > ul > li > a {
+  padding: 10px 18px;
+  color: #EFE; text-transform: uppercase; text-decoration: none;
+  border: 1px solid transparent; border-radius: 20px;
+  transition: border 300ms linear;
+}
+nav > ul > li > a > span {
+  font-weight: bold; font-size: 25 px;
+  position: relative; left: 8px;
+}
+nav > ul > li > a:hover {
+  border: 1px solid #EFE; border-radius: 20px;
+}
+nav > ul > li:hover .submenu {
+  display: block; opacity: 1; max-height: 500px;
+  padding: 20px 0px 20px 0px;
+
+}
+/*submenu styles */
+ul.submenu {
+  position: absolute; top: 44px; left: 25px;
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+  padding: -10px 0px 20px 0px;
+  display: block; opacity: 0; max-height: 0px;
+  transition: opacity 300ms linear, max-height 400ms linear, padding 400ms linear;
+}
+ul.submenu li {
+  padding: 10px 0px;
+}
+ul.submenu a {
+  padding: 10px 18px;
   color: black;
-  padding: 12px 16px;
   text-decoration: none;
-  display: block;
-  text-align: left;
 }
-dropdown-content a:hover {
-  background-color:yellow;
+h2 {
+  font: luminari;
+  -webkit-text-stroke-width: 0.25px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.322);
 }
-.show {display: block;}
+nav > ul > li >ul >li {
+  display: inline-block;
+  padding: 10px 0px;
+  position: relative;
+}
+nav > ul > li> ul > li:hover .subsubmenu {
+  display: block; opacity: 1; max-height: 300px;
+  padding: 20px 0px 20px 0px;
+}
+/*subsubmenu styles*/
+.subsubmenu {
+  position: absolute; top: 27px; left: 85px;
+  background-color: rgb(150, 4, 4);
+  border-radius: 0px 10px 10px 10px;
+  padding: -10px 0px 20px 0px;
+  display: block; opacity: 0; max-height: 0px; overflow: hidden;
+  transition: opacity 300ms linear, max-height 400ms linear, padding 400ms linear;
+ 
+}
+ul.subsubmenu li {
+  padding: 10px 0px;
+}
+ul.subsubmenu a {
+  padding: 10px 18px;
+  color: white;
+  text-decoration: none;
+}
+nav > ul > li > ul li > a > span {
+  font-weight: bold; font-size: 25 px;
+  position: relative; left: 5px;
+}
+.centerimg {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
