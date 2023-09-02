@@ -27,9 +27,6 @@ nav {
   gap: 1rem;
   margin: 0;
   padding: 5px;
-  /*this may be the old way:
-  position: absolute; bottom: 0px; left: 50%;
-  transform: translateX(-50%);*/
 }
 nav > ul, .submenu, .subsubmenu {
   list-style-type: none;
@@ -52,10 +49,12 @@ nav > ul > li > a > span {
 }
 nav > ul > li > a:hover {
   border: 1px solid #EFE; border-radius: 20px;
+  z-index: 1;
 }
 nav > ul > li:hover .submenu {
   display: block; opacity: 1; max-height: 500px;
   padding: 20px 0px 20px 0px;
+  z-index: 1;
 
 }
 /*submenu styles */
@@ -88,6 +87,7 @@ nav > ul > li >ul >li {
 nav > ul > li> ul > li:hover .subsubmenu {
   display: block; opacity: 1; max-height: 300px;
   padding: 20px 0px 20px 0px;
+  z-index: 2;
 }
 /*subsubmenu styles*/
 .subsubmenu {
